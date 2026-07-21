@@ -1,0 +1,59 @@
+"use client";
+
+import { Link } from "@/navigation";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+export default function Footer() {
+  const t = useTranslations('footer');
+  const currentYear = new Date().getFullYear();
+  
+  return (
+    <footer className="border-t border-white/10 bg-[#050505] pt-16 pb-8" role="contentinfo">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12 mb-16">
+        <div className="w-full md:w-1/3">
+          <div className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 group" aria-label="Looma - Go to home">
+              <Image src="/svg/logo-looma.svg" alt="" width={50} height={50} aria-hidden="true" />
+              <Image src="/svg/looma.svg" alt="Looma" width={100} height={50} />
+            </Link>
+          </div>
+          <p className="text-neutral-500 text-sm leading-relaxed">
+            {t.rich('description', {
+              recording: (chunks) => <span className="text-neutral-400 font-bold">{chunks}</span>,
+              editing: (chunks) => <span className="text-neutral-400 font-bold">{chunks}</span>
+            })}
+          </p>
+          <p className="text-neutral-600 text-xs mt-4">
+            Built by <a href="https://solez.vercel.app" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">Samin Yeasar</a> (<a href="https://github.com/Solez-ai" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">Solez-ai</a>)
+          </p>
+        </div>
+
+        <div className="flex gap-12 md:gap-24">
+          <nav aria-label={t('product')}>
+            <h4 className="text-white font-medium text-sm mb-4">{t('product')}</h4>
+            <ul className="space-y-3 text-sm text-neutral-500">
+              <li><a href="#docs" className="hover:text-white transition-colors">{t('docs')}</a></li>
+              <li><Link href="/editor" className="hover:text-white transition-colors">{t('editor')}</Link></li>
+              <li><a href="https://github.com/Solez-ai/looma" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{t('github')}</a></li>
+            </ul>
+          </nav>
+          <nav aria-label={t('contact')}>
+            <h4 className="text-white font-medium text-sm mb-4">{t('contact')}</h4>
+            <ul className="space-y-3 text-sm text-neutral-500">
+              <li><a href="https://solez.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Portfolio</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span className="text-xs text-neutral-600">&copy; {currentYear} Looma  {t('rights')}</span>
+        <span className="text-xs text-neutral-600">
+          Built by <a href="https://solez.vercel.app" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">Samin Yeasar</a>
+        </span>
+      </div>
+    </footer>
+  );
+}

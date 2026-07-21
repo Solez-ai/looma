@@ -1,0 +1,26 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00A3EE"/>
+      <stop offset="50%" stop-color="#0085DB"/>
+      <stop offset="100%" stop-color="#003780"/>
+    </linearGradient>
+    <linearGradient id="logoGradLight" x1="0" y1="200" x2="400" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00A3FF"/>
+      <stop offset="100%" stop-color="#00A3EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring - play button shape -->
+  <path d="M200 40C111.6 40 40 111.6 40 200C40 288.4 111.6 360 200 360C288.4 360 360 288.4 360 200C360 111.6 288.4 40 200 40Z"
+        stroke="url(#logoGrad)" stroke-width="12" fill="none" opacity="0.3"/>
+
+  <!-- Inner circle -->
+  <circle cx="200" cy="200" r="130" fill="url(#logoGrad)" opacity="0.15"/>
+
+  <!-- L letter mark - modern geometric -->
+  <path d="M155 125L155 275L255 275" stroke="url(#logoGradLight)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Play triangle accent -->
+  <path d="M245 175L300 210L245 245Z" fill="#00A3EE" opacity="0.8"/>
+</svg>

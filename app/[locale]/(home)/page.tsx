@@ -1,0 +1,91 @@
+import Hero from "@/app/components/ui/home/Hero";
+import InteractiveRecordingSteps from "@/app/components/ui/home/RecordingSteps";
+import { StructuredData, generateWebAppSchema, generateOrganizationSchema } from "@/app/components/seo/StructuredData";
+import type { Metadata } from 'next';
+import { CarouselDemos } from "@/app/components/ui/home/CarouselDemos";
+import BannerCTA from "@/app/components/ui/home/BannerCTA";
+import FeaturesGrid from "@/app/components/ui/home/Featuresgrid";
+import FeaturesShowcase from "@/app/components/ui/home/FeaturesShowcase";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = 'https://looma-solez.vercel.app';
+
+  const title = 'Create Professional Demos and Edit Videos in Seconds';
+  const description = 'Free AI-powered online video editor. Screen recorder, cinematic zooms, professional mockups, and HD export. No watermark.';
+  const keywords = ['video editor', 'screen recorder', 'professional demos', 'video zoom', 'mockups', 'online video editor', 'free video editor'];
+
+  return {
+    title,
+    description,
+    keywords,
+    alternates: {
+      canonical: baseUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: baseUrl,
+      images: [
+        {
+          url: `${baseUrl}/images/metadata/preview.jpg`,
+          width: 1200,
+          height: 630,
+          alt: 'Looma - Professional Video Editor',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${baseUrl}/images/metadata/preview.jpg`],
+    },
+  };
+}
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+
+  return (
+    <>
+      <StructuredData data={generateWebAppSchema('en')} />
+      <StructuredData data={generateOrganizationSchema()} />
+
+      <div className="flex flex-col">
+        <div className="relative overflow-hidden bg-gradient-radial-primary w-full">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-75 h-75 rounded-full bg-cyan-500/15 blur-[80px] pointer-events-none z-0" aria-hidden="true" />
+          <section className="pt-32 pb-6 sm:pb-14" aria-label="Hero section">
+            <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+              <Hero />
+            </div>
+            <CarouselDemos />
+          </section>
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#0a0a0a] to-transparent pointer-events-none z-20" />
+        </div>
+
+        <section className="w-full py-10 sm:py-16" aria-label="How it works">
+          <div className="max-w-7xl mx-auto xl:px-0">
+            <InteractiveRecordingSteps />
+          </div>
+        </section>
+
+        <div className="relative overflow-hidden w-full bg-black">
+          <section className="w-full" aria-label="Editor features and demos">
+            <div className="w-full mx-auto">
+              <FeaturesShowcase />
+              <FeaturesGrid />
+            </div>
+
+
+            <BannerCTA />
+          </section>
+        </div>
+      </div>
+    </>
+  );
+}

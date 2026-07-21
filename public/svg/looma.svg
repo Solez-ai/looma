@@ -1,0 +1,25 @@
+<svg width="720" height="200" viewBox="0 0 720 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="720" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00A3FF"/>
+      <stop offset="60%" stop-color="#00A3EE"/>
+      <stop offset="100%" stop-color="#0085DB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- L letter -->
+  <path d="M40 45L40 160L145 160" stroke="url(#textGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- O letter -->
+  <ellipse cx="225" cy="102" rx="50" ry="50" stroke="white" stroke-width="18" fill="none"/>
+
+  <!-- O letter - second O -->
+  <ellipse cx="340" cy="102" rx="50" ry="50" stroke="white" stroke-width="18" fill="none"/>
+
+  <!-- M letter -->
+  <path d="M420 160L420 50L480 100L540 50L540 160" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- A letter -->
+  <path d="M595 160L635 50L675 160" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M607 128L663 128" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+</svg>
