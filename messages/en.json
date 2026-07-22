@@ -216,9 +216,7 @@
       "camera": "Camera",
       "cursor": "Cursor",
       "toolbar": "Tools toolbar",
-      "soon": "Soon",
-      "motion": "Motion",
-      "newTool": "New"
+      "soon": "Soon"
     },
     "popovers": {
       "background": {
@@ -252,12 +250,8 @@
       "history": {
         "title": "Image History",
         "description": "Access your previous captures to reuse or edit them."
-      },
-      "motion": {
-        "title": "Motion Effects",
-        "description": "Apply smooth transitions and animations to your elements."
       }
-    },
+    }
     "recording": {
       "idle": "Record screen",
       "inProgress": "Recording in progress...",

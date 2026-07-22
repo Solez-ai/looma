@@ -11,7 +11,6 @@ import {
 interface PopoverConfig {
     title: string;
     description: string;
-    videoSrc?: string;
 }
 
 interface SidebarToolProps {
@@ -146,18 +145,7 @@ export const SidebarTool = forwardRef<HTMLButtonElement, SidebarToolProps>(
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(6,182,212,0.4)_0%,transparent_65%)] mix-blend-screen" />
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(147,51,234,0.15)_0%,transparent_60%)]" />
                         </div>
-                        {isOpen && (
-                            <video
-                                src={popover.videoSrc}
-                                poster="/images/pages/thumbnail-popover.avif"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="absolute inset-0 w-full h-full object-cover mask-b-to-20% mask-b-from-80% z-10"
-                                aria-hidden="true"
-                            />
-                        )}
+
                         <div className="absolute inset-0 z-20 bg-linear-to-t from-[#09090B] via-[#09090B]/50 to-transparent pointer-events-none" />
                         <div className="relative z-30 p-5">
                             <h3 className="text-sm font-bold text-white mb-1 drop-shadow-[0px_0px_15px_rgba(183,203,248,1)] drop-shadow-[0px_0px_2px_rgba(0,0,0,0.5)]">

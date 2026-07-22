@@ -243,8 +243,7 @@ export function ToolsSidebar({
                         onClick={() => onToolChange("screenshot")}
                         popover={{
                             title: t("popovers.background.title"),
-                            description: t("popovers.background.description"),
-                            videoSrc: "/videos/preview-background.mp4"
+                            description: t("popovers.background.description")
                         }}
                     />
 
@@ -255,8 +254,7 @@ export function ToolsSidebar({
                         onClick={() => onToolChange("mockup")}
                         popover={{
                             title: t("popovers.mockup.title"),
-                            description: t("popovers.mockup.description"),
-                            videoSrc: "/videos/preview-mockup.mp4"
+                            description: t("popovers.mockup.description")
                         }}
                     />
 
@@ -271,8 +269,7 @@ export function ToolsSidebar({
                             badgeCount={activeTool !== "video" ? newVideosCount : undefined}
                             popover={{
                                 title: t("popovers.videos.title"),
-                                description: t("popovers.videos.description"),
-                                videoSrc: "/videos/preview-videos.mp4"
+                                description: t("popovers.videos.description")
                             }}
                         />
                     )}
@@ -284,8 +281,7 @@ export function ToolsSidebar({
                         ref={elementsToolRef}
                         popover={{
                             title: t("popovers.elements.title"),
-                            description: t("popovers.elements.description"),
-                            videoSrc: "/videos/preview-elements.mp4"
+                            description: t("popovers.elements.description")
                         }}
                         icon={
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-200" >
@@ -303,8 +299,7 @@ export function ToolsSidebar({
                             onClick={() => onToolChange("history")}
                             popover={{
                                 title: t("popovers.history.title"),
-                                description: t("popovers.history.description"),
-                                videoSrc: "/videos/preview-history.mp4"
+                                description: t("popovers.history.description")
                             }}
                         />
                     )}
@@ -319,8 +314,7 @@ export function ToolsSidebar({
                                 ref={audioToolRef}
                                 popover={{
                                     title: t("popovers.audio.title"),
-                                    description: t("popovers.audio.description"),
-                                    videoSrc: "/videos/preview-audio.mp4"
+                                    description: t("popovers.audio.description")
                                 }}
                             />
 
@@ -332,8 +326,7 @@ export function ToolsSidebar({
                                 ref={zoomToolRef}
                                 popover={{
                                     title: t("popovers.zoom.title"),
-                                    description: t("popovers.zoom.description"),
-                                    videoSrc: "/videos/preview-zoom.mp4"
+                                    description: t("popovers.zoom.description")
                                 }}
                             />
 
@@ -345,8 +338,7 @@ export function ToolsSidebar({
                                 ref={cameraToolRef}
                                 popover={{
                                     title: t("popovers.camera.title"),
-                                    description: t("popovers.camera.description"),
-                                    videoSrc: "/videos/preview-camera.mp4"
+                                    description: t("popovers.camera.description")
                                 }}
                             />
 
