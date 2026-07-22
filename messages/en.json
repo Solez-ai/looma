@@ -251,7 +251,7 @@
         "title": "Image History",
         "description": "Access your previous captures to reuse or edit them."
       }
-    }
+    },
     "recording": {
       "idle": "Record screen",
       "inProgress": "Recording in progress...",
